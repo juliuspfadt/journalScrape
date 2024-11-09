@@ -1,0 +1,355 @@
+{
+    "response": {
+        "search": "http://marklogic.com/appservices/search",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xh": "http://www.w3.org/1999/xhtml",
+        "responseHeader": {
+            "status": "0",
+            "QTime": "0.079907",
+            "params": {
+                "service": "psycinfo",
+                "function": "/query/facet",
+                "q": "-JournalStatus:I AND PAJournalCode:xge AND PAVolume:153",
+                "fc": "IssueMonth",
+                "start": "0",
+                "rows": "10000",
+                "format": "json",
+                "debug": "false",
+                "results": "false",
+                "facet": "true",
+                "facet.prefix": "*",
+                "facet.offset": "0",
+                "facet.limit": "11",
+                "query": "false",
+                "hl": "false",
+                "child": "false",
+                "total": "0",
+                "boosting": "false",
+                "w_title": "10",
+                "w_year": "3",
+                "w_keywords": "6",
+                "w_abstract": "1",
+                "w_first_post": "2.5"
+            }
+        },
+        "result": {
+            "start": "1",
+            "rows": "10000",
+            "numFound": "171"
+        },
+        "facet": {
+            "name": "IssueMonth",
+            "doc": [
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "11"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "11"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Nov"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "110000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "10"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "10"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Oct"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "100000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "9"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "9"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Sep"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "90000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "8"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "8"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Aug"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "80000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "7"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "7"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Jul"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "70000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "6"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "6"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Jun"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "60000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "5"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "5"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "May"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "50000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "4"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "4"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Apr"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "40000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "3"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "3"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Mar"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "30000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "2"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "2"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Feb"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "20000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                },
+                {
+                    "str": [
+                        {
+                            "name": "Issue",
+                            "value": "1"
+                        },
+                        {
+                            "name": "IssueCode",
+                            "value": "1"
+                        },
+                        {
+                            "name": "MonthSeason",
+                            "value": "Jan"
+                        },
+                        {
+                            "name": "IssueSort",
+                            "value": "10000"
+                        },
+                        {
+                            "name": "JournalCode",
+                            "value": "xge"
+                        },
+                        {
+                            "name": "Volume",
+                            "value": "153"
+                        }
+                    ]
+                }
+            ]
+        },
+        "debug": ""
+    }
+}

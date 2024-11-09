@@ -1,0 +1,965 @@
+{
+    "response": {
+        "search": "http://marklogic.com/appservices/search",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xh": "http://www.w3.org/1999/xhtml",
+        "responseHeader": {
+            "status": "0",
+            "QTime": "0.592684",
+            "params": {
+                "service": "psycinfo",
+                "function": "/query/facet",
+                "fq": "-JournalStatus:I AND PAJournalCode:xge",
+                "fc": "VolumeYear",
+                "start": "0",
+                "rows": "10000",
+                "format": "json",
+                "debug": "false",
+                "results": "false",
+                "facet": "true",
+                "facet.prefix": "*",
+                "facet.offset": "0",
+                "facet.limit": "11",
+                "query": "false",
+                "hl": "false",
+                "child": "false",
+                "total": "0",
+                "boosting": "false",
+                "w_title": "10",
+                "w_year": "3",
+                "w_keywords": "6",
+                "w_abstract": "1",
+                "w_first_post": "2.5"
+            }
+        },
+        "result": {
+            "start": "1",
+            "rows": "10000",
+            "numFound": "10734"
+        },
+        "facet": {
+            "name": "VolumeYear",
+            "values": [
+                {
+                    "Volume": "153",
+                    "Year": "2024",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1530000"
+                },
+                {
+                    "Volume": "152",
+                    "Year": "2023",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1520000"
+                },
+                {
+                    "Volume": "151",
+                    "Year": "2022",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1510000"
+                },
+                {
+                    "Volume": "150",
+                    "Year": "2021",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1500000"
+                },
+                {
+                    "Volume": "149",
+                    "Year": "2020",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1490000"
+                },
+                {
+                    "Volume": "148",
+                    "Year": "2019",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1480000"
+                },
+                {
+                    "Volume": "147",
+                    "Year": "2018",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1470000"
+                },
+                {
+                    "Volume": "146",
+                    "Year": "2017",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1460000"
+                },
+                {
+                    "Volume": "145",
+                    "Year": "2016",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1450000"
+                },
+                {
+                    "Volume": "144",
+                    "Year": "2015",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1440000"
+                },
+                {
+                    "Volume": "143",
+                    "Year": "2014",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1430000"
+                },
+                {
+                    "Volume": "142",
+                    "Year": "2013",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1420000"
+                },
+                {
+                    "Volume": "141",
+                    "Year": "2012",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1410000"
+                },
+                {
+                    "Volume": "140",
+                    "Year": "2011",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1400000"
+                },
+                {
+                    "Volume": "139",
+                    "Year": "2010",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1390000"
+                },
+                {
+                    "Volume": "138",
+                    "Year": "2009",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1380000"
+                },
+                {
+                    "Volume": "137",
+                    "Year": "2008",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1370000"
+                },
+                {
+                    "Volume": "136",
+                    "Year": "2007",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1360000"
+                },
+                {
+                    "Volume": "135",
+                    "Year": "2006",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1350000"
+                },
+                {
+                    "Volume": "134",
+                    "Year": "2005",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1340000"
+                },
+                {
+                    "Volume": "133",
+                    "Year": "2004",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1330000"
+                },
+                {
+                    "Volume": "132",
+                    "Year": "2003",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1320000"
+                },
+                {
+                    "Volume": "131",
+                    "Year": "2002",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1310000"
+                },
+                {
+                    "Volume": "130",
+                    "Year": "2001",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1300000"
+                },
+                {
+                    "Volume": "129",
+                    "Year": "2000",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1290000"
+                },
+                {
+                    "Volume": "128",
+                    "Year": "1999",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1280000"
+                },
+                {
+                    "Volume": "127",
+                    "Year": "1998",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1270000"
+                },
+                {
+                    "Volume": "126",
+                    "Year": "1997",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1260000"
+                },
+                {
+                    "Volume": "125",
+                    "Year": "1996",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1250000"
+                },
+                {
+                    "Volume": "124",
+                    "Year": "1995",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1240000"
+                },
+                {
+                    "Volume": "123",
+                    "Year": "1994",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1230000"
+                },
+                {
+                    "Volume": "122",
+                    "Year": "1993",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1220000"
+                },
+                {
+                    "Volume": "121",
+                    "Year": "1992",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1210000"
+                },
+                {
+                    "Volume": "120",
+                    "Year": "1991",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1200000"
+                },
+                {
+                    "Volume": "119",
+                    "Year": "1990",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1190000"
+                },
+                {
+                    "Volume": "118",
+                    "Year": "1989",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1180000"
+                },
+                {
+                    "Volume": "117",
+                    "Year": "1988",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1170000"
+                },
+                {
+                    "Volume": "116",
+                    "Year": "1987",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1160000"
+                },
+                {
+                    "Volume": "115",
+                    "Year": "1986",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1150000"
+                },
+                {
+                    "Volume": "114",
+                    "Year": "1985",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1140000"
+                },
+                {
+                    "Volume": "113",
+                    "Year": "1984",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1130000"
+                },
+                {
+                    "Volume": "112",
+                    "Year": "1983",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1120000"
+                },
+                {
+                    "Volume": "111",
+                    "Year": "1982",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1110000"
+                },
+                {
+                    "Volume": "110",
+                    "Year": "1981",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1100000"
+                },
+                {
+                    "Volume": "109",
+                    "Year": "1980",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1090000"
+                },
+                {
+                    "Volume": "108",
+                    "Year": "1979",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1080000"
+                },
+                {
+                    "Volume": "107",
+                    "Year": "1978",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1070000"
+                },
+                {
+                    "Volume": "106",
+                    "Year": "1977",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1060000"
+                },
+                {
+                    "Volume": "105",
+                    "Year": "1976",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1050000"
+                },
+                {
+                    "Volume": "104",
+                    "Year": "1975",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1040000"
+                },
+                {
+                    "Volume": "103",
+                    "Year": "1974",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1030000"
+                },
+                {
+                    "Volume": "102",
+                    "Year": "1974",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1020000"
+                },
+                {
+                    "Volume": "101",
+                    "Year": "1973",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1010000"
+                },
+                {
+                    "Volume": "100",
+                    "Year": "1973",
+                    "JournalCode": "xge",
+                    "VolumeSort": "1000000"
+                },
+                {
+                    "Volume": "99",
+                    "Year": "1973",
+                    "JournalCode": "xge",
+                    "VolumeSort": "990000"
+                },
+                {
+                    "Volume": "98",
+                    "Year": "1973",
+                    "JournalCode": "xge",
+                    "VolumeSort": "980000"
+                },
+                {
+                    "Volume": "97",
+                    "Year": "1973",
+                    "JournalCode": "xge",
+                    "VolumeSort": "970000"
+                },
+                {
+                    "Volume": "96",
+                    "Year": "1972",
+                    "JournalCode": "xge",
+                    "VolumeSort": "960000"
+                },
+                {
+                    "Volume": "95",
+                    "Year": "1972",
+                    "JournalCode": "xge",
+                    "VolumeSort": "950000"
+                },
+                {
+                    "Volume": "94",
+                    "Year": "1972",
+                    "JournalCode": "xge",
+                    "VolumeSort": "940000"
+                },
+                {
+                    "Volume": "93",
+                    "Year": "1972",
+                    "JournalCode": "xge",
+                    "VolumeSort": "930000"
+                },
+                {
+                    "Volume": "92",
+                    "Year": "1972",
+                    "JournalCode": "xge",
+                    "VolumeSort": "920000"
+                },
+                {
+                    "Volume": "91",
+                    "Year": "1971",
+                    "JournalCode": "xge",
+                    "VolumeSort": "910000"
+                },
+                {
+                    "Volume": "90",
+                    "Year": "1971",
+                    "JournalCode": "xge",
+                    "VolumeSort": "900000"
+                },
+                {
+                    "Volume": "89",
+                    "Year": "1971",
+                    "JournalCode": "xge",
+                    "VolumeSort": "890000"
+                },
+                {
+                    "Volume": "88",
+                    "Year": "1971",
+                    "JournalCode": "xge",
+                    "VolumeSort": "880000"
+                },
+                {
+                    "Volume": "87",
+                    "Year": "1971",
+                    "JournalCode": "xge",
+                    "VolumeSort": "870000"
+                },
+                {
+                    "Volume": "86",
+                    "Year": "1970",
+                    "JournalCode": "xge",
+                    "VolumeSort": "860000"
+                },
+                {
+                    "Volume": "85",
+                    "Year": "1970",
+                    "JournalCode": "xge",
+                    "VolumeSort": "850000"
+                },
+                {
+                    "Volume": "84",
+                    "Year": "1970",
+                    "JournalCode": "xge",
+                    "VolumeSort": "840000"
+                },
+                {
+                    "Volume": "83",
+                    "Year": "1970",
+                    "JournalCode": "xge",
+                    "VolumeSort": "830000"
+                },
+                {
+                    "Volume": "82",
+                    "Year": "1969",
+                    "JournalCode": "xge",
+                    "VolumeSort": "820000"
+                },
+                {
+                    "Volume": "81",
+                    "Year": "1969",
+                    "JournalCode": "xge",
+                    "VolumeSort": "810000"
+                },
+                {
+                    "Volume": "80",
+                    "Year": "1969",
+                    "JournalCode": "xge",
+                    "VolumeSort": "800000"
+                },
+                {
+                    "Volume": "79",
+                    "Year": "1969",
+                    "JournalCode": "xge",
+                    "VolumeSort": "790000"
+                },
+                {
+                    "Volume": "78",
+                    "Year": "1968",
+                    "JournalCode": "xge",
+                    "VolumeSort": "780000"
+                },
+                {
+                    "Volume": "77",
+                    "Year": "1968",
+                    "JournalCode": "xge",
+                    "VolumeSort": "770000"
+                },
+                {
+                    "Volume": "76",
+                    "Year": "1968",
+                    "JournalCode": "xge",
+                    "VolumeSort": "760000"
+                },
+                {
+                    "Volume": "75",
+                    "Year": "1967",
+                    "JournalCode": "xge",
+                    "VolumeSort": "750000"
+                },
+                {
+                    "Volume": "74",
+                    "Year": "1967",
+                    "JournalCode": "xge",
+                    "VolumeSort": "740000"
+                },
+                {
+                    "Volume": "73",
+                    "Year": "1967",
+                    "JournalCode": "xge",
+                    "VolumeSort": "730000"
+                },
+                {
+                    "Volume": "72",
+                    "Year": "1966",
+                    "JournalCode": "xge",
+                    "VolumeSort": "720000"
+                },
+                {
+                    "Volume": "71",
+                    "Year": "1966",
+                    "JournalCode": "xge",
+                    "VolumeSort": "710000"
+                },
+                {
+                    "Volume": "70",
+                    "Year": "1965",
+                    "JournalCode": "xge",
+                    "VolumeSort": "700000"
+                },
+                {
+                    "Volume": "69",
+                    "Year": "1965",
+                    "JournalCode": "xge",
+                    "VolumeSort": "690000"
+                },
+                {
+                    "Volume": "68",
+                    "Year": "1964",
+                    "JournalCode": "xge",
+                    "VolumeSort": "680000"
+                },
+                {
+                    "Volume": "67",
+                    "Year": "1964",
+                    "JournalCode": "xge",
+                    "VolumeSort": "670000"
+                },
+                {
+                    "Volume": "66",
+                    "Year": "1963",
+                    "JournalCode": "xge",
+                    "VolumeSort": "660000"
+                },
+                {
+                    "Volume": "65",
+                    "Year": "1963",
+                    "JournalCode": "xge",
+                    "VolumeSort": "650000"
+                },
+                {
+                    "Volume": "64",
+                    "Year": "1962",
+                    "JournalCode": "xge",
+                    "VolumeSort": "640000"
+                },
+                {
+                    "Volume": "63",
+                    "Year": "1962",
+                    "JournalCode": "xge",
+                    "VolumeSort": "630000"
+                },
+                {
+                    "Volume": "62",
+                    "Year": "1961",
+                    "JournalCode": "xge",
+                    "VolumeSort": "620000"
+                },
+                {
+                    "Volume": "61",
+                    "Year": "1961",
+                    "JournalCode": "xge",
+                    "VolumeSort": "610000"
+                },
+                {
+                    "Volume": "60",
+                    "Year": "1960",
+                    "JournalCode": "xge",
+                    "VolumeSort": "600000"
+                },
+                {
+                    "Volume": "59",
+                    "Year": "1960",
+                    "JournalCode": "xge",
+                    "VolumeSort": "590000"
+                },
+                {
+                    "Volume": "58",
+                    "Year": "1959",
+                    "JournalCode": "xge",
+                    "VolumeSort": "580000"
+                },
+                {
+                    "Volume": "57",
+                    "Year": "1959",
+                    "JournalCode": "xge",
+                    "VolumeSort": "570000"
+                },
+                {
+                    "Volume": "56",
+                    "Year": "1958",
+                    "JournalCode": "xge",
+                    "VolumeSort": "560000"
+                },
+                {
+                    "Volume": "55",
+                    "Year": "1958",
+                    "JournalCode": "xge",
+                    "VolumeSort": "550000"
+                },
+                {
+                    "Volume": "54",
+                    "Year": "1957",
+                    "JournalCode": "xge",
+                    "VolumeSort": "540000"
+                },
+                {
+                    "Volume": "53",
+                    "Year": "1957",
+                    "JournalCode": "xge",
+                    "VolumeSort": "530000"
+                },
+                {
+                    "Volume": "52",
+                    "Year": "1956",
+                    "JournalCode": "xge",
+                    "VolumeSort": "520000"
+                },
+                {
+                    "Volume": "51",
+                    "Year": "1956",
+                    "JournalCode": "xge",
+                    "VolumeSort": "510000"
+                },
+                {
+                    "Volume": "50",
+                    "Year": "1955",
+                    "JournalCode": "xge",
+                    "VolumeSort": "500000"
+                },
+                {
+                    "Volume": "49",
+                    "Year": "1955",
+                    "JournalCode": "xge",
+                    "VolumeSort": "490000"
+                },
+                {
+                    "Volume": "48",
+                    "Year": "1954",
+                    "JournalCode": "xge",
+                    "VolumeSort": "480000"
+                },
+                {
+                    "Volume": "47",
+                    "Year": "1954",
+                    "JournalCode": "xge",
+                    "VolumeSort": "470000"
+                },
+                {
+                    "Volume": "46",
+                    "Year": "1953",
+                    "JournalCode": "xge",
+                    "VolumeSort": "460000"
+                },
+                {
+                    "Volume": "45",
+                    "Year": "1953",
+                    "JournalCode": "xge",
+                    "VolumeSort": "450000"
+                },
+                {
+                    "Volume": "44",
+                    "Year": "1952",
+                    "JournalCode": "xge",
+                    "VolumeSort": "440000"
+                },
+                {
+                    "Volume": "43",
+                    "Year": "1952",
+                    "JournalCode": "xge",
+                    "VolumeSort": "430000"
+                },
+                {
+                    "Volume": "42",
+                    "Year": "1951",
+                    "JournalCode": "xge",
+                    "VolumeSort": "420000"
+                },
+                {
+                    "Volume": "41",
+                    "Year": "1951",
+                    "JournalCode": "xge",
+                    "VolumeSort": "410000"
+                },
+                {
+                    "Volume": "40",
+                    "Year": "1950",
+                    "JournalCode": "xge",
+                    "VolumeSort": "400000"
+                },
+                {
+                    "Volume": "39",
+                    "Year": "1949",
+                    "JournalCode": "xge",
+                    "VolumeSort": "390000"
+                },
+                {
+                    "Volume": "38",
+                    "Year": "1948",
+                    "JournalCode": "xge",
+                    "VolumeSort": "380000"
+                },
+                {
+                    "Volume": "37",
+                    "Year": "1947",
+                    "JournalCode": "xge",
+                    "VolumeSort": "370000"
+                },
+                {
+                    "Volume": "36",
+                    "Year": "1946",
+                    "JournalCode": "xge",
+                    "VolumeSort": "360000"
+                },
+                {
+                    "Volume": "35",
+                    "Year": "1945",
+                    "JournalCode": "xge",
+                    "VolumeSort": "350000"
+                },
+                {
+                    "Volume": "34",
+                    "Year": "1944",
+                    "JournalCode": "xge",
+                    "VolumeSort": "340000"
+                },
+                {
+                    "Volume": "33",
+                    "Year": "1943",
+                    "JournalCode": "xge",
+                    "VolumeSort": "330000"
+                },
+                {
+                    "Volume": "32",
+                    "Year": "1943",
+                    "JournalCode": "xge",
+                    "VolumeSort": "320000"
+                },
+                {
+                    "Volume": "31",
+                    "Year": "1942",
+                    "JournalCode": "xge",
+                    "VolumeSort": "310000"
+                },
+                {
+                    "Volume": "30",
+                    "Year": "1942",
+                    "JournalCode": "xge",
+                    "VolumeSort": "300000"
+                },
+                {
+                    "Volume": "29",
+                    "Year": "1941",
+                    "JournalCode": "xge",
+                    "VolumeSort": "290000"
+                },
+                {
+                    "Volume": "28",
+                    "Year": "1941",
+                    "JournalCode": "xge",
+                    "VolumeSort": "280000"
+                },
+                {
+                    "Volume": "27",
+                    "Year": "1940",
+                    "JournalCode": "xge",
+                    "VolumeSort": "270000"
+                },
+                {
+                    "Volume": "26",
+                    "Year": "1940",
+                    "JournalCode": "xge",
+                    "VolumeSort": "260000"
+                },
+                {
+                    "Volume": "25",
+                    "Year": "1939",
+                    "JournalCode": "xge",
+                    "VolumeSort": "250000"
+                },
+                {
+                    "Volume": "24",
+                    "Year": "1939",
+                    "JournalCode": "xge",
+                    "VolumeSort": "240000"
+                },
+                {
+                    "Volume": "23",
+                    "Year": "1938",
+                    "JournalCode": "xge",
+                    "VolumeSort": "230000"
+                },
+                {
+                    "Volume": "22",
+                    "Year": "1938",
+                    "JournalCode": "xge",
+                    "VolumeSort": "220000"
+                },
+                {
+                    "Volume": "21",
+                    "Year": "1937",
+                    "JournalCode": "xge",
+                    "VolumeSort": "210000"
+                },
+                {
+                    "Volume": "20",
+                    "Year": "1937",
+                    "JournalCode": "xge",
+                    "VolumeSort": "200000"
+                },
+                {
+                    "Volume": "19",
+                    "Year": "1936",
+                    "JournalCode": "xge",
+                    "VolumeSort": "190000"
+                },
+                {
+                    "Volume": "18",
+                    "Year": "1935",
+                    "JournalCode": "xge",
+                    "VolumeSort": "180000"
+                },
+                {
+                    "Volume": "17",
+                    "Year": "1934",
+                    "JournalCode": "xge",
+                    "VolumeSort": "170000"
+                },
+                {
+                    "Volume": "16",
+                    "Year": "1933",
+                    "JournalCode": "xge",
+                    "VolumeSort": "160000"
+                },
+                {
+                    "Volume": "15",
+                    "Year": "1932",
+                    "JournalCode": "xge",
+                    "VolumeSort": "150000"
+                },
+                {
+                    "Volume": "14",
+                    "Year": "1931",
+                    "JournalCode": "xge",
+                    "VolumeSort": "140000"
+                },
+                {
+                    "Volume": "13",
+                    "Year": "1930",
+                    "JournalCode": "xge",
+                    "VolumeSort": "130000"
+                },
+                {
+                    "Volume": "12",
+                    "Year": "1929",
+                    "JournalCode": "xge",
+                    "VolumeSort": "120000"
+                },
+                {
+                    "Volume": "11",
+                    "Year": "1928",
+                    "JournalCode": "xge",
+                    "VolumeSort": "110000"
+                },
+                {
+                    "Volume": "10",
+                    "Year": "1927",
+                    "JournalCode": "xge",
+                    "VolumeSort": "100000"
+                },
+                {
+                    "Volume": "9",
+                    "Year": "1926",
+                    "JournalCode": "xge",
+                    "VolumeSort": "90000"
+                },
+                {
+                    "Volume": "8",
+                    "Year": "1925",
+                    "JournalCode": "xge",
+                    "VolumeSort": "80000"
+                },
+                {
+                    "Volume": "7",
+                    "Year": "1924",
+                    "JournalCode": "xge",
+                    "VolumeSort": "70000"
+                },
+                {
+                    "Volume": "6",
+                    "Year": "1923",
+                    "JournalCode": "xge",
+                    "VolumeSort": "60000"
+                },
+                {
+                    "Volume": "5",
+                    "Year": "1922",
+                    "JournalCode": "xge",
+                    "VolumeSort": "50000"
+                },
+                {
+                    "Volume": "4",
+                    "Year": "1921",
+                    "JournalCode": "xge",
+                    "VolumeSort": "40000"
+                },
+                {
+                    "Volume": "3",
+                    "Year": "1920",
+                    "JournalCode": "xge",
+                    "VolumeSort": "30000"
+                },
+                {
+                    "Volume": "2",
+                    "Year": "1917",
+                    "JournalCode": "xge",
+                    "VolumeSort": "20000"
+                },
+                {
+                    "Volume": "1",
+                    "Year": "1916",
+                    "JournalCode": "xge",
+                    "VolumeSort": "10000"
+                }
+            ]
+        },
+        "debug": ""
+    }
+}
