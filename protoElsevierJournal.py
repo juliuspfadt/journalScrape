@@ -1,29 +1,34 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-import time
+import cloudscraper
 
-# Set up Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")  # Run in headless mode if desired
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15")
+# Initialize cloudscraper, which can handle Cloudflare protection
+scraper = cloudscraper.create_scraper()
 
-# Initialize the WebDriver
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+# Set up the API URL and parameters
+url = "https://www.sciencedirect.com/search/api?cid=271799&date=2004-2004&pub=Behaviour%20Research%20and%20Therapy&show=100&sortBy=date&t=b2bea8931965191740cebf4326a31a21c4702b6189ecfc4834eca439039c02f3b31e31d6f3c7875cddaff1ea5e64cc6bb6ead2dbdc558d419228e4307723f952a73f53b89aa7c586928044fae7a11b8b31b9e02aa3f189ab7fb57868e07f184514cbf85106eba2be3cae9a054f2bb164&hostname=www.sciencedirect.com"
+params = {
+    'cid': '271799',
+    'date': '2004-2004',
+    'pub': 'Behaviour Research and Therapy',
+    'show': '100',
+    'sortBy': 'date',
+    't': 'b2bea8931965191740cebf4326a31a21c4702b6189ecfc4834eca439039c02f3b31e31d6f3c7875cddaff1ea5e64cc6bb6ead2dbdc558d419228e4307723f952a73f53b89aa7c586928044fae7a11b8b31b9e02aa3f189ab7fb57868e07f184514cbf85106eba2be3cae9a054f2bb164',
+    'hostname': 'www.sciencedirect.com',
+}
 
-# Navigate to the URL
-url = "https://www.sciencedirect.com/search/api?cid=271799&date=2004-2004&pub=Behaviour%20Research%20and%20Therapy&show=100&sortBy=date&t=f3a58e0e7e3f991d8630b44327aa4de2c4702b6189ecfc4834eca439039c02f3b31e31d6f3c7875cddaff1ea5e64cc6bb6ead2dbdc558d419228e4307723f952a73f53b89aa7c586928044fae7a11b8b50fa47c73a2f0530c1f7871f041b6c7714cbf85106eba2be3cae9a054f2bb164&hostname=www.sciencedirect.com"
-driver.get(url)
+# Headers, including User-Agent and Referer
+headers = {
+    'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    'Accept': 'application/json',
+    'Referer': 'https://www.sciencedirect.com/search?pub=Behaviour%20Research%20and%20Therapy&cid=271799&date=2004-2004&sortBy=date&show=100',
+}
 
-# Wait for the page to fully load
-time.sleep(5)  # Adjust as needed
+# Make the API request with cloudscraper
+response = scraper.get(url, headers=headers, params=params)
 
-# Retrieve the page source or specific elements
-page_source = driver.page_source
-print(page_source)  # For debugging purposes; see if the desired content is available
-
-# Close the driver
-driver.quit()
+# Check the response
+if response.status_code == 200:
+    print("Data retrieved successfully!")
+    data = response.json()
+    print(data)
+else:
+    print("Failed to retrieve data:", response.status_code)

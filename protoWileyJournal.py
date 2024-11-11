@@ -20,7 +20,7 @@ options.add_argument("--disable-dev-shm-usage")
 options.add_argument("user-agent=" + random.choice(USER_AGENTS))
 
 driver = uc.Chrome(options=options)
-wait = WebDriverWait(driver, 10)
+wait = WebDriverWait(driver, 5)
 
 # Base URL and article storage
 base_url = "https://onlinelibrary.wiley.com"
