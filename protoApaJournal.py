@@ -10,11 +10,11 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15",
     "Origin": "https://psycnet.apa.org",
     "X-Requested-With": "XMLHttpRequest",
-    "Cookie": "_ga_H2KGDH2XNS=GS1.1.1731174065.4.1.1731176349.0.0.0; cId=71dc670e-253a-48a2-8c38-62a1c4aac68f; nlbi_2377601_2147483392=7f1cLY0yjWUjwHW/RZi9EAAAAACIWdzGZkuuu95apcHueIZ8; OptanonConsent=isGpcEnabled=0&datestamp=Sat+Nov+09+2024+19%3A19%3A09+GMT%2B0100+(Central+European+Standard+Time)&version=202305.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=af09d6d1-1099-4935-9c02-aa36e5c266c0&interactionCount=2&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1&AwaitingReconsent=false&geolocation=NL%3BNH; reese84=3:Ei9Y+g4w3XcAIVOdXFIaYg==:tHr+ZmxMErMxMn4PhDl9CwN6ersJFbLG9vhescCvXG+pL2pW4aq+PDBce1Z2cWjsdoGDgfpNuqBQHttINLvxl46bduH8jZX1VkPi5aGC2fyK6oC/NrR2HsButiuZkfXJ6u6jSfqg9+3fsD5dXjgoepPD3I1VvGr0LTjozQTN2wnsAQJuMUmihv5NwCFYG021U7nbTb3Id8SchCbQag+Dxulzhzpx9qlMldJcp8W7XXEvcQu3X1Xgaiu8fQkjTI1X1V9fWgRISrhV5LuwsEPmAeurzArcYAoPKEf4tALJ/wB/Dmm+9EFZHEdw/Rr+utC7o2GpacNRS4oFUPuM80gP9Sl/N2vJ4B7ooA3Oqrq4b9UIqTiRKl8AipZRgCiomL0+QRDnlVtDnlut6LhnBu3MBmCC4MvOhHdZqiFxSVXqjaMDY/fscmBmEheVZdg1QKNANwgHd98uN0nta+0prFbpDQ==:zXnQQvHrd//OJQQvpzcnzYiXrlG4LHYTahuYGbbjM5c=; _ga=GA1.2.284430323.1731156832; _gid=GA1.2.1782037811.1731156832; incap_ses_502_2624409=g29icAm9o1X7GsNgg3b3Bk+iL2cAAAAAVqAcCeN2cQJeSjJXH4DBtQ==; incap_ses_1782_2377603=og9YCcDngGgNcx7suO+6GE+iL2cAAAAAV4n1wwWoz2PejS+1WUWjnA==; incap_ses_336_2624409=rcZOUAgiMy0R3zKEa7apBLGeL2cAAAAApBQsU64nRg+ibiiY65+dpA==; PN_HOST=https%3A%2F%2Fpsycnet.apa.org; PN_RC=false; connect.sid=s%3AFOX82w214iqtVNx-FfbXB9TDFYw_Jbza.0pMHaTDp9p3qwKQPJgqXZRxQ7nkbjfjRrg1nAcY%2Fx4o; incap_ses_7232_2624409=yxGFZo9VZ0YhFXrc2DldZOCOL2cAAAAAViayXpD68El2aBC8nJL8dQ==; incap_ses_261_2624409=drQKZbMPAg3ERWxESkKfA2KOL2cAAAAAXPEZUsQL/SuD9jurysFukw==; incap_ses_419_2624409=8F3MJHfKaHtMyNT1c5bQBZCML2cAAAAAaHlWKLKOKlRPT+OTCebVAg==; incap_ses_333_2624409=AxIGJ41P7yk6b5o1Ag6fBOmLL2cAAAAApheH38qtyISyNpW6hhT+yw==; nlbi_2624409=AAZnVN9GRVVbaLHOzJKtcwAAAADcKCG/JXSNsCC9U90qr8Qt; incap_ses_1782_2377601=CWabcyMdeFCI4xTsuO+6GOmLL2cAAAAAF2LB9+VbTwQssEbazYnPFg==; nlbi_2377601=zqQYVATeuVSQiIpbRZi9EAAAAABXSM9ZLTFbQa4g+1+HmjXr; nlbi_2377603_2147483392=0D7zFbAUTDM1ij6S900V4wAAAADXp1/rdlWySU2/6N6m1dAV; csId=94fa063d-7d9c-44fd-bc93-8fdbfa16280b; nlbi_2377603=yErYTki+R3pa8AY7900V4wAAAABEdgchhsMOyqVvYhC8T9yT; _ga_SZXLGDJGNB=GS1.1.1731162489.1.0.1731162490.59.0.0; _gcl_au=1.1.894300664.1731162489; visid_incap_2624412=n6nSMdzwTGy9qMxBxa+ShHhxL2cAAAAAQUIPAAAAAAA1+G3doyfkgylK56398OCK; OptanonAlertBoxClosed=2024-11-09T12:53:51.504Z; cart_my_apa_org=87161e35-13e4-457b-806b-596f73efa7e3; visid_incap_2624409=h0Yo2IutRXStB1w+KKtKm169KGcAAAAAQUIPAAAAAAC7a7FTUlrHt2KzMJ4HcVXL; visid_incap_2377601=f+Ow2L9GTGyyPhM6c+s81lQABWcAAAAAQUIPAAAAAAAMTtEFYdPkqwj2KA6PzSdZ; visid_incap_2377603=4OR7OJjtTNmG/QfoEA8JZlUABWcAAAAAQUIPAAAAAADfTIEoJvpWu5CXKy1ybFGEE"
+    "Cookie": "_ga=GA1.2.284430323.1731156832; _ga_H2KGDH2XNS=GS1.1.1731333575.6.1.1731335410.0.0.0; _gid=GA1.2.2122662503.1731333576; nlbi_2377601_2147483392=mDCOS3LCtD8tFpl7RZi9EAAAAADRjFomxspvcM7ADuFDL0F3; OptanonConsent=isGpcEnabled=0&datestamp=Mon+Nov+11+2024+15%3A30%3A10+GMT%2B0100+(Central+European+Standard+Time)&version=202305.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=af09d6d1-1099-4935-9c02-aa36e5c266c0&interactionCount=2&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1&AwaitingReconsent=false&geolocation=NL%3BNH; reese84=3:PiFQyW4oxJCawufTR9VjTg==:O9f8R90upEmDQYVYbNLN3ArsdcRTwG/imUJQrZilCAiexak1KxoWIZ5qJHE0Rt6ca/iWfxfsmd2MhwVzPPqhyq9YxdhOPn3v1ZPL8L4lv0mlhBy7UjoO5uq+2DHTVDRLe28hnYgELLMiyFJpAkUemNi37qrk7Anw5QkGavvvUw361C0dQBUSfPUC9WE1V6aRhigDGWGASzzoiTV8gtIvwSZArnOa2dPbUdUwa0QM6K8nmUvQQ1OgRBBJczOQECOaPg/DmWmfGEpXErEFiawVSPUoUBJ073P6FSThas1FRy/2pwxlfoDO0Z10wYg3pS77u8hb7zbdmUJdv9pSQ6bLmZFW86wnkEAkSltTsvtjQ6XUQBTRZ1w3IG+AhZv6hSZTJx6OeAjeaEHim1bZ4zd6B60hsW5xEM162poBOMT7Cywyis+IeoWnClD/z8zEEzwKnAxvUJlk7efpvC5UIWnn0w==:DqIMa9gikXzzHpADXFUey5SM5R1xxTQjhbtic/fXflc=; cId=71dc670e-253a-48a2-8c38-62a1c4aac68f; _dc_gtm_UA-10493335-18=1; incap_ses_699_2624409=5FaNWgtWXzL50zTd9VizCekUMmcAAAAArbsTgaDcu9+7oReGoLY1XQ==; nlbi_2377603_2147483392=+sy8WywGnD5zvz6b900V4wAAAAC1NK77xCPr8Usb+E+IL3x+; incap_ses_420_2624409=f7X+IqZYBRGDktPm9CPUBQ4RMmcAAAAATizMQreQoesRzegV8ftxXg==; incap_ses_410_2624409=CWUfE//0RRbyzg53Ap2wBQMRMmcAAAAAkiqPMCkBe767xvXwsqAm0Q==; incap_ses_349_2624409=kBGHWNz2uTgL5Yo61eXXBMIOMmcAAAAAji6jOJtixOynv0SAHsQgVQ==; PN_RC=true; incap_ses_679_2624409=VBqZcv+KiwOhj4n5EEtsCf0NMmcAAAAAq8PB+Qdkaz1Fmizq34Ha2g==; nlbi_2624409=quUEH2OuNhVGwiGQzJKtcwAAAAAtp06ksmvs84A+JEmIQ8ps; cart_my_apa_org=92e7bb16-0ba2-4b29-9368-ae99e2ac355e; incap_ses_6524_2624409=3P1WYrbwPnpqjcF8m+eJWsYNMmcAAAAAhKQtNjLEKBiGSMlLBAD3Cw==; visid_incap_2624409=s1C+rYfqSnSBj9z+U2p8VcYNMmcAAAAAQUIPAAAAAAB+4jxVRzR6TpHTdSBkrP50; incap_ses_1687_2377601=IlXAZR6tGAc/yC7GqW1pF8YNMmcAAAAAwx6m9dLUYnZvceV0F363Iw==; nlbi_2377601=jyAiE+1hQxDH+JoRRZi9EAAAAAAHMhGYg63qzPMBWhCeT9+g; PN_HOST=https%3A%2F%2Fpsycnet.apa.org; connect.sid=s%3ANpaHS-aGKtdYeTQODXrLZIhBJsh02mP9.tuOrGNH6PecXETFqip7KOdtoY64uBfhCQYnvr8kStvc; csId=e6a74c61-650f-4006-9158-7c55801df8f0; incap_ses_1687_2377603=4bTeZFCiEjb8vS7GqW1pF8MNMmcAAAAAnM8VoVFXanPzXHMIb1wCBw==; nlbi_2377603=pWSfDYAluGNfsxBg900V4wAAAACPIwMtQQ4J8LMepVwgei1B; _ga_SZXLGDJGNB=GS1.1.1731162489.1.0.1731162490.59.0.0; _gcl_au=1.1.894300664.1731162489; visid_incap_2624412=n6nSMdzwTGy9qMxBxa+ShHhxL2cAAAAAQUIPAAAAAAA1+G3doyfkgylK56398OCK; OptanonAlertBoxClosed=2024-11-09T12:53:51.504Z; visid_incap_2377601=f+Ow2L9GTGyyPhM6c+s81lQABWcAAAAAQUIPAAAAAAAMTtEFYdPkqwj2KA6PzSdZ; visid_incap_2377603=4OR7OJjtTNmG/QfoEA8JZlUABWcAAAAAQUIPAAAAAADfTIEoJvpWu5CXKy1ybFGE"
 }
 
 # Function to get volumes and years within a specified range
-def get_volumes(start_year=2000, end_year=2024):
+def get_volumes(start_year=2004, end_year=2024):
     url = "https://psycnet.apa.org/api/request/browsePA.getVolumes"
     payload = {
         "api": "browsePA.getVolumes",
@@ -24,14 +24,13 @@ def get_volumes(start_year=2000, end_year=2024):
     
     if response.status_code == 200:
         volumes = response.json().get("response", {}).get("facet", {}).get("values", [])
-        # Filter for specified years
         return [
             {"volume": vol["Volume"], "year": vol["Year"]}
             for vol in volumes
             if start_year <= int(vol["Year"]) <= end_year
         ]
     else:
-        print(f"Failed to get volumes: {response.status_code}")
+        print(f"Failed to get volumes: {response.status_code} - {response.text}")
         return []
 
 # Function to get issues for a specific volume
@@ -44,106 +43,91 @@ def get_issues(volume):
     response = session.post(url, headers=headers, json=payload)
     if response.status_code == 200:
         issues = response.json().get("response", {}).get("facet", {}).get("doc", [])
-        issue_numbers = []
-        for issue in issues:
-            for detail in issue.get("str", []):
-                if detail["name"] == "Issue":
-                    issue_numbers.append(detail["value"])
-                    break
-        return issue_numbers
+        issue_numbers = sorted(
+            [issue.get("str")[0]["value"] for issue in issues if issue.get("str")],
+            key=lambda x: int(x) if x.isdigit() else x
+        )
+        return issue_numbers  # Sorted as strings for correct API format
     else:
-        print(f"Failed to get issues for volume {volume}: {response.status_code}")
+        print(f"Failed to get issues for volume {volume}: {response.status_code} - {response.text}")
         return []
 
 # Function to get articles for a specific volume and issue
-def get_articles(volume, issue):
+def get_articles(volume, issue, year, retries=3):
     url = "https://psycnet.apa.org/api/request/browsePA.getArticles"
     payload = {
         "api": "browsePA.getArticles",
         "params": {
             "code": "xge",
             "volume": volume,
-            "issue": issue
-        },
-        "logs": {
-            "eventType": "Journal TOC",
-            "pageId": "B_PA_TOC"
+            "issue": str(issue)  # Ensure issue is a string for the API request
         }
     }
-    response = session.post(url, headers=headers, json=payload)
-    if response.status_code == 200:
-        docs = response.json().get("response", {}).get("result", {}).get("doc", [])
-        
-        articles = []
-        for doc in docs:
-            # Convert authors list to comma-separated string without brackets or quotes
-            authors = ', '.join(doc.get("AuthorOrig", []))
+    for attempt in range(retries):
+        response = session.post(url, headers=headers, json=payload, timeout=10)
+        if response.status_code == 200:
+            docs = response.json().get("response", {}).get("result", {}).get("doc", [])
+            
+            articles = []
+            for doc in docs:
+                authors = ', '.join(doc.get("AuthorOrig", []))
+                pages = f"{doc.get('PAFirstPage', 'N/A')}-{doc.get('Pagination', 'N/A')}" if doc.get("PAFirstPage") else "N/A"
+                
+                # Format DOI and PDF Link as URLs
+                doi = doc.get("DOI", "N/A")
+                doi_link = f"https://doi.org/{doi}" if doi and not doi.startswith("http") else doi
+                pdf_link = doc.get("PDFLink", "N/A")
+                pdf_link = f"https://psycnet.apa.org{pdf_link}" if pdf_link and not pdf_link.startswith("http") else pdf_link
 
-            article_data = {
-                "title": doc.get("GivenDocumentTitle"),
-                "authors": authors,
-                "DOI": doc.get("DOI"),
-                "journal_title": doc.get("PIJournalTitle"),
-                "publication_year": doc.get("PublicationYear"),
-                "volume": doc.get("PAVolume"),
-                "issue": doc.get("PAIssue"),
-                "first_page": doc.get("PAFirstPage"),
-                "pagination": doc.get("Pagination"),
-                "month_season": doc.get("MonthSeason"),
-                "abstract_available": doc.get("HasAbstract") == "true",
-                "open_access": doc.get("HasOpenAccess") == "true",
-                "subject_headings": doc.get("SubjectHeadingList", {}).get("SubjectHeadingLevel1"),
-                "cited_by_count": doc.get("CitedByCount"),
-                "impact_statement_available": doc.get("HasImpactStatement") == "true",
-                "full_text_available": doc.get("HasFullText") == "true",
-                "PIReleaseDate": doc.get("PIReleaseDate"),
-                "UID": doc.get("UID"),
-                "ProductCode": doc.get("ProductCode"),
-                "XMLLink": doc.get("XMLLink"),
-                "PDFLink": doc.get("PDFLink"),
-                "PAIssueCode": doc.get("PAIssueCode"),
-                "PAJournalCode": doc.get("PAJournalCode"),
-                "AuthorObjects": doc.get("AuthorObjects", []),
-                "HasCitations": doc.get("HasCitations"),
-                "HasInfographic": doc.get("HasInfographic"),
-                "SFXOpenURL": doc.get("SFXOpenURL"),
-                "JournalEditors": doc.get("JournalEditors", []),
-                "ContributorList": doc.get("ContributorList", []),
-                "isRetracted": doc.get("isRetracted"),
-                "RightsLink": doc.get("RightsLink"),
-                "HasAccess": doc.get("HasAccess"),
-                "MayAccessRecordDetails": doc.get("MayAccessRecordDetails"),
-                "HasAcceptedManuscript": doc.get("HasAcceptedManuscript")
-            }
-            articles.append(article_data)
-        return articles
-    else:
-        print(f"Failed to get articles for volume {volume}, issue {issue}: {response.status_code}")
-        return []
+                article_data = {
+                    "Journal": doc.get("PIJournalTitle", "N/A"),
+                    "Volume": volume,
+                    "Issue": issue,
+                    "Publication Year": year,
+                    "Title": doc.get("GivenDocumentTitle", "N/A"),
+                    "Authors": authors,
+                    "Pages": pages,
+                    "Type": doc.get("SubjectHeadingList", {}).get("SubjectHeadingLevel1", "N/A"),
+                    "DOI": doi_link,
+                    "PDF Link": pdf_link
+                }
+                articles.append(article_data)
+            print(f"  Retrieved {len(articles)} articles from volume {volume}, issue {issue}.")
+            return articles
+        else:
+            print(f"Attempt {attempt + 1} failed for volume {volume}, issue {issue}: {response.status_code} - {response.text}")
+            time.sleep(2)  # Wait before retrying
+    print(f"Failed to access articles for volume {volume}, issue {issue} after {retries} attempts.")
+    return []
 
 # Main process to retrieve data and save to CSV and JSON
 all_data_csv = []  # Initialize for CSV
 all_data_json = {}  # Initialize for JSON
 
-volumes = get_volumes()  # Gets volumes between 2000 and 2024
+# Retrieve volumes and issues within the specified range in chronological order
+print("Starting data retrieval...")
+volumes = sorted(get_volumes(), key=lambda x: int(x["year"]))
+print(f"Found {len(volumes)} volumes between 2004 and 2024.")
+
 for vol_info in volumes:
     volume = vol_info["volume"]
     year = vol_info["year"]
+    print(f"Processing volume {volume} for year {year}...")
     issues = get_issues(volume)
+    print(f"  Found {len(issues)} issues in volume {volume}.")
     all_data_json[volume] = {}  # Initialize volume in JSON structure
     for issue in issues:
-        articles = get_articles(volume, issue)
+        articles = get_articles(volume, issue, year)
         all_data_json[volume][issue] = articles  # Save to JSON structure
         for article in articles:
             # Append flattened article data for CSV
             all_data_csv.append({
-                "journal_title": article["journal_title"],  # First element in CSV rows
-                "volume": volume,
-                "year": year,
-                "issue": issue,
+                "Journal": article["Journal"],
+                "Volume": volume,
+                "Issue": issue,
+                "Publication Year": year,
                 **article
             })
-
 
 # Convert to DataFrame and save to CSV
 df = pd.DataFrame(all_data_csv)

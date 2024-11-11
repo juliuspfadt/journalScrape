@@ -21,6 +21,7 @@ def extract_article_metadata(article_url):
         response.raise_for_status()
         article_soup = BeautifulSoup(response.content, "html.parser")
 
+        # Extract article metadata
         title = article_soup.find("meta", {"name": "dc.title"})["content"] if article_soup.find("meta", {"name": "dc.title"}) else "N/A"
         doi = article_soup.find("meta", {"name": "citation_doi"})["content"] if article_soup.find("meta", {"name": "citation_doi"}) else "N/A"
         doi = f"https://doi.org/{doi}" if doi != "N/A" else "N/A"
@@ -34,24 +35,35 @@ def extract_article_metadata(article_url):
         volume = article_soup.find("meta", {"name": "citation_volume"})["content"] if article_soup.find("meta", {"name": "citation_volume"}) else "N/A"
         issue = article_soup.find("meta", {"name": "citation_issue"})["content"] if article_soup.find("meta", {"name": "citation_issue"}) else "N/A"
 
-        # Extract citation count if available
-        citation_count = "N/A"
-        metrics_items = article_soup.find_all("li", class_="app-article-metrics-bar__item")
-        for item in metrics_items:
-            if "Citations" in item.text:
-                citation_count = ''.join(filter(str.isdigit, item.text.strip()))
-                break
+        # Extract page numbers
+        start_page = article_soup.find("meta", {"name": "prism.startingPage"})["content"] if article_soup.find("meta", {"name": "prism.startingPage"}) else "N/A"
+        end_page = article_soup.find("meta", {"name": "prism.endingPage"})["content"] if article_soup.find("meta", {"name": "prism.endingPage"}) else "N/A"
+        pages = f"{start_page}-{end_page}" if start_page != "N/A" and end_page != "N/A" else "N/A"
 
+        # Extract PDF link
+        pdf_link = article_soup.find("meta", {"name": "citation_pdf_url"})["content"] if article_soup.find("meta", {"name": "citation_pdf_url"}) else "N/A"
+
+        # Extract affiliations
+        affiliations = []
+        author_info_section = article_soup.find("div", {"id": "author-information-content"})
+        if author_info_section:
+            affiliation_items = author_info_section.find_all("p", class_="c-article-author-affiliation__address")
+            affiliations = [affiliation.text.strip() for affiliation in affiliation_items]
+        author_affiliations = "; ".join(affiliations) if affiliations else "N/A"
+
+        # Structuring data as per the required order
         return {
-            "Title": title,
-            "DOI": doi,
-            "Publication Year": publication_year,
-            "Authors": authors,
-            "Article Type": article_type,
-            "Journal Title": journal_title,
+            "Journal": journal_title,
             "Volume": volume,
             "Issue": issue,
-            "Citation Count": citation_count
+            "Publication Year": publication_year,
+            "Title": title,
+            "Authors": ", ".join(authors),
+            "Author Affiliations": author_affiliations,
+            "Pages": pages,
+            "Type": article_type,
+            "DOI": doi,
+            "PDF Link": pdf_link
         }
     except (requests.RequestException, AttributeError) as e:
         print(f"Error fetching article details from {article_url}: {e}")
@@ -79,16 +91,17 @@ def process_articles_on_page(soup):
 # Initialize a list to store all article data across years
 all_article_data = []
 
+# Specify the year range for processing
+start_year = 2004
+end_year = 2024
+
 # Loop through each year in the desired range
-for year in range(2000, 2025):  # Adjust the range as needed, e.g., 2000 to 2024
+for year in range(start_year, end_year + 1):
     print(f"Processing articles for the year {year}...")
     base_url = "https://link.springer.com"
     driver.get(f"{base_url}/search?new-search=true&facet-journal-id=13423&query=*&content-type=article&date=custom&dateFrom={year}&dateTo={year}&sortBy=oldestFirst")
     
-    page = 1
     while True:
-        print(f"Processing page {page} for the year {year}...")
-
         # Parse articles on the current page
         soup = BeautifulSoup(driver.page_source, "html.parser")
         all_article_data.extend(process_articles_on_page(soup))
@@ -99,7 +112,6 @@ for year in range(2000, 2025):  # Adjust the range as needed, e.g., 2000 to 2024
         if next_button:
             next_page_url = base_url + next_button["href"]
             driver.get(next_page_url)
-            page += 1
             time.sleep(2)  # Allow time for the page to load
         else:
             print(f"No more pages for the year {year}.")

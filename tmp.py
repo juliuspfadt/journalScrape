@@ -3,12 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import json
-import pandas as pd
 import time
-import requests
 import random
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import pandas as pd
 
 # List of User-Agents
 USER_AGENTS = [
@@ -42,39 +39,51 @@ def extract_article_data(article, volume, issue_number, journal_name):
     publication_date = article.find("span", string=lambda x: x and "First published" in x)
     pub_year = publication_date.text.replace("First published ", "").split()[-1] if publication_date else "N/A"
     
+    # Extract the article type
+    article_type = article.find("span", class_="issue-item-access").find_next_sibling("span").text.strip() if article.find("span", class_="issue-item-access") else "N/A"
+    
     return {
         "Journal": journal_name,
         "Publication Year": pub_year,
         "Volume": volume,
         "Issue": issue_number,
         "Title": title,
-        "Authors": authors,
+        "Authors": ", ".join(authors),
         "DOI": doi_link,
         "Pages": pages,
+        "Article Type": article_type
     }
 
-# Function to fetch additional data from individual article pages asynchronously
+# Function to fetch additional data from individual article pages and extract Crossref citation count
 def fetch_article_details(article_data):
-    response = requests.get(article_data["DOI"], headers={"User-Agent": random.choice(USER_AGENTS)})
-    article_soup = BeautifulSoup(response.content, "html.parser")
+    driver.get(article_data["DOI"])
+    try:
+        wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        page_soup = BeautifulSoup(driver.page_source, "html.parser")
+        
+        # Extract Crossref citation count
+        crossref_citation = page_soup.find("span", class_="cross-ref-count font-weight-semibold")
+        if crossref_citation:
+            article_data["Crossref Citations"] = crossref_citation.text.split(":")[1].strip()
+            print(f"Crossref Citations for {article_data['Title']}: {article_data['Crossref Citations']}")
+        else:
+            article_data["Crossref Citations"] = "N/A"
+            print(f"No Crossref citation found for {article_data['Title']}")
+    except Exception as e:
+        print(f"Error accessing {article_data['Title']}: {e}")
+        article_data["Crossref Citations"] = "Error"
     
-    # Extract citation count if available
-    crossref_citation_span = article_soup.find("span", class_="cross-ref-count font-weight-semibold")
-    crossref_citations = ''.join(filter(str.isdigit, crossref_citation_span.text.strip())) if crossref_citation_span else "N/A"
-    
-    article_data["Crossref Citations"] = crossref_citations
     return article_data
 
-# Process each issue
+# Process each issue with a limit of 3 clicks on the "Next issue" button
 issue_count = 1
-while current_issue_url:
+while current_issue_url and issue_count <= 3:
     driver.get(current_issue_url)
-    time.sleep(1)  # Shorter delay; adjust if needed
+    time.sleep(1)  # Adjust delay as needed
 
     # Parse the TOC page
     toc_soup = BeautifulSoup(driver.page_source, "html.parser")
-    issue_title = toc_soup.find("div", class_="spd__title").get_text(strip=True)
-    volume_issue_info = issue_title.replace("Volume ", "").replace("Issue ", "").split(", ")
+    volume_issue_info = toc_soup.find("div", class_="spd__title").get_text(strip=True).replace("Volume ", "").replace("Issue ", "").split(", ")
     volume = volume_issue_info[0].split()[0] if len(volume_issue_info) > 0 else "N/A"
     issue_number = volume_issue_info[0].split()[1] if len(volume_issue_info[0].split()) > 1 else "N/A"
 
@@ -87,26 +96,21 @@ while current_issue_url:
 
     # Find the "Next issue" link
     next_issue_link = toc_soup.find("a", class_="content-navigation__btn--next")
-    if next_issue_link:
+    if next_issue_link and next_issue_link.get("href"):
         current_issue_url = base_url + next_issue_link.get("href")
         issue_count += 1
     else:
         print("No more issues.")
         current_issue_url = None
 
+# Fetch Crossref citation details for each article
+for article in articles:
+    fetch_article_details(article)
+
+# Convert to DataFrame and save data
+df = pd.DataFrame(articles)
+df.to_csv("results/Sage/articles_with_citations.csv", index=False, encoding="utf-8")
+print("Data saved with Crossref citations.")
+
 # Close the driver
 driver.quit()
-
-# Fetch additional article details concurrently
-with ThreadPoolExecutor(max_workers=5) as executor:  # Adjust max_workers as needed
-    future_to_article = {executor.submit(fetch_article_details, article): article for article in articles}
-    for future in as_completed(future_to_article):
-        updated_article = future.result()
-
-# Save data to JSON and CSV
-with open("articles_sage.json", "w", encoding="utf-8") as f:
-    json.dump(articles, f, ensure_ascii=False, indent=4)
-df = pd.DataFrame(articles)
-df.to_csv("articles_sage.csv", index=False, encoding="utf-8")
-
-print("Data saved to articles_sage.json and articles_sage.csv.")
