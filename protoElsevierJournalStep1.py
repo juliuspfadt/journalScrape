@@ -1,6 +1,7 @@
 
 # change the links for different journals
 # for getting the pdf links, one needs to have authorization, aka, a license
+# if there is no authorization, the pdf links will be empty
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -95,7 +96,7 @@ driver.quit()
 
 # Save TOC data to CSV
 toc_df = pd.DataFrame(toc_articles)
-# toc_df.to_csv("results/Elsevier/brt_toc_articles.csv", index=False)
-toc_df.to_csv("results/Elsevier/jesp_toc_articles.csv", index=False)
+# toc_df.to_csv("results/Journals/Elsevier/brt_toc_articles.csv", index=False)
+toc_df.to_csv("results/Journals/Elsevier/jesp_toc_articles.csv", index=False)
 
 print("TOC data saved to toc_articles.csv")

@@ -16,5 +16,5 @@ Scrape specific journal websites for article titles, authors, years, volumes, is
   - using safari go to the website > Develop > Show Page Source > Network > Reload > filter results for type 'xhr' > find the getArticles request > Headers > fill your own information into the headers in the script. Not entirely certain which headers are needed; depends a bit on the website, the headers in my script seemed to be enough even though I needed to refresh the cookie sometimes when trying to rerun the script. Probably fewer headers are also fine.
 - run the script
 
-# Workflow for Sage and Springer
+# Workflow for Sage, Springer, Wiley, and Elsevier
 - run the scripts

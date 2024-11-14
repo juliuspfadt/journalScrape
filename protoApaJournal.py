@@ -141,10 +141,10 @@ for vol_info in volumes:
 
 # Convert to DataFrame and save to CSV
 df = pd.DataFrame(all_data_csv)
-df.to_csv("results/APA/xge_articles.csv", index=False)
+df.to_csv("results/Journals/APA/xge_articles.csv", index=False)
 print("Data saved to articles.csv")
 
 # Save all data to JSON file
-with open("results/APA/xge_articles.json", "w", encoding="utf-8") as f:
+with open("results/Journals/APA/xge_articles.json", "w", encoding="utf-8") as f:
     json.dump(all_data_json, f, ensure_ascii=False, indent=4)
 print("All data saved to 'articles.json'")

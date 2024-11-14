@@ -127,8 +127,8 @@ for idx, article in enumerate(articles):
 
 # Save data
 df = pd.DataFrame(articles)
-df.to_csv("results/Sage/pss_articles.csv", index=False, encoding="utf-8")
-with open("results/Sage/pss_articles.json", "w", encoding="utf-8") as f:
+df.to_csv("results/Journals/Sage/pss_articles.csv", index=False, encoding="utf-8")
+with open("results/Journals/Sage/pss_articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=4)
 
 print("Data saved to articles.csv and articles.json.")

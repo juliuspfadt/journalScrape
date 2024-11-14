@@ -143,8 +143,8 @@ for year in range(2004, 2025):  # Modify range as needed
 
 # Save to CSV and JSON
 df = pd.DataFrame(articles)
-df.to_csv("results/Wiley/ds_articles.csv", index=False, encoding="utf-8")
-with open("results/Wiley/ds_articles.json", "w", encoding="utf-8") as f:
+df.to_csv("results/Journals/Wiley/ds_articles.csv", index=False, encoding="utf-8")
+with open("results/Journals/Wiley/ds_articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=4)
 
 print("Data saved to CSV and JSON.")

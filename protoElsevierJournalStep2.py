@@ -18,8 +18,8 @@ options.add_argument("--disable-background-networking")  # Minimize background t
 options.add_argument("--disable-sync")  # Disable Chrome Sync
 
 # Paths to input and output files
-input_file = "results/Elsevier/brt_toc_articles.csv"
-output_file = "results/Elsevier/brt_articles.csv"
+input_file = "results/Journals/Elsevier/brt_toc_articles.csv"
+output_file = "results/Journals/Elsevier/brt_articles.csv"
 
 # Load the CSV with article data
 toc_df = pd.read_csv(input_file).head
@@ -112,7 +112,7 @@ driver.quit()
 # Final save to JSON format, ensuring all entries are marked as "N/A" where applicable
 final_df = pd.read_csv(output_file).fillna("N/A")  # Reload to ensure all data is included
 
-with open("results/Elsevier/brt_articles.json", "w", encoding="utf-8") as f:
+with open("results/Journals/Elsevier/brt_articles.json", "w", encoding="utf-8") as f:
     json.dump(detailed_articles, f, ensure_ascii=False, indent=4)
 
 print("Detailed article data saved.")
