@@ -24,6 +24,7 @@ options.add_argument("user-agent=" + random.choice(USER_AGENTS))
 driver = webdriver.Chrome(options=options)
 wait = WebDriverWait(driver, 20)  # Increased timeout
 
+# this is where one can specify a different journal and a different starting issue
 base_url = "https://journals.sagepub.com"
 current_issue_url = f"{base_url}/toc/pssa/15/1"
 journal_name = "Psychological Science"
@@ -33,10 +34,17 @@ articles = []
 def extract_article_data(article, volume, issue_number, journal_name, pub_year):
     title = article.find("h5", class_="issue-item__heading").text.strip()
     authors = [author.text.strip() for author in article.find_all("span", id=lambda x: x and x.startswith("author"))]
-    doi_suffix = article.find("a", href=True)["href"]
-    doi_link = base_url + doi_suffix
-    pages = article.find("span", string=lambda x: x and "pp." in x).text.strip() if article.find("span", string=lambda x: x and "pp." in x) else "N/A"
     
+    # Extract DOI from the checkbox input (more reliable source for DOI)
+    doi_checkbox = article.find("input", {"name": "doi"})
+    doi_suffix = doi_checkbox["value"] if doi_checkbox else None
+    doi_link = f"https://doi.org/{doi_suffix}" if doi_suffix else "N/A"
+
+# Extract article URL from the link within the title div
+    article_link = article.find("div", class_="issue-item__title").find("a", href=True)
+    article_url = base_url + article_link["href"] if article_link else "N/A"
+
+    pages = article.find("span", string=lambda x: x and "pp." in x).text.strip() if article.find("span", string=lambda x: x and "pp." in x) else "N/A"
     article_type = article.find("span", class_="issue-item-access").find_next_sibling("span").text.strip() if article.find("span", class_="issue-item-access") else "N/A"
     pdf_link = article.find("a", {"title": "download"})
     pdf_url = base_url + pdf_link["href"] if pdf_link else "N/A"
@@ -52,7 +60,8 @@ def extract_article_data(article, volume, issue_number, journal_name, pub_year):
         "Pages": pages,
         "Type": article_type,
         "DOI": doi_link,
-        "PDF Link": pdf_url
+        "PDF Link": pdf_url,
+        "Article URL": article_url
     }
 
 # Function to fetch additional data from individual article pages
@@ -104,7 +113,7 @@ while current_issue_url:
             article_data = extract_article_data(article, volume, issue_number, journal_name, pub_year)
             articles.append(article_data)
 
-        print(f"Processed issue {volume}, Issue {issue_number} with {len(articles)} articles so far.")
+        print(f"Processed volume {volume}, Issue {issue_number} with {len(articles)} articles so far.")
         next_issue_link = toc_soup.find("a", class_="content-navigation__btn--next")
         current_issue_url = base_url + next_issue_link.get("href") if next_issue_link and next_issue_link.get("href") else None
     except urllib3.exceptions.ReadTimeoutError:
@@ -118,8 +127,8 @@ for idx, article in enumerate(articles):
 
 # Save data
 df = pd.DataFrame(articles)
-df.to_csv("results/Sage/articles.csv", index=False, encoding="utf-8")
-with open("results/Sage/articles.json", "w", encoding="utf-8") as f:
+df.to_csv("results/Sage/pss_articles.csv", index=False, encoding="utf-8")
+with open("results/Sage/pss_articles.json", "w", encoding="utf-8") as f:
     json.dump(articles, f, ensure_ascii=False, indent=4)
 
 print("Data saved to articles.csv and articles.json.")

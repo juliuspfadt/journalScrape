@@ -121,10 +121,10 @@ for year in range(start_year, end_year + 1):
 driver.quit()
 
 # Save data to JSON and CSV
-with open("results/Springer/articles.json", "w", encoding="utf-8") as f:
+with open("results/Springer/pbr_articles.json", "w", encoding="utf-8") as f:
     json.dump(all_article_data, f, ensure_ascii=False, indent=4)
 
 df = pd.DataFrame(all_article_data)
-df.to_csv("results/Springer/articles.csv", index=False, encoding="utf-8")
+df.to_csv("results/Springer/pbr_articles.csv", index=False, encoding="utf-8")
 
 print("Data saved.")

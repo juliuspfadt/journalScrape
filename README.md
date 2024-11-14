@@ -18,4 +18,3 @@ Scrape specific journal websites for article titles, authors, years, volumes, is
 
 # Workflow for Sage and Springer
 - run the scripts
-- they take much longer because the data is retrieved from the nested html files
