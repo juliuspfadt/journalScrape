@@ -13,8 +13,6 @@ dfXge = pd.read_csv('results/Journals/APA/xge_articles.csv')
 # Remove rows with "No authorship indicated" and save the result in a new DataFrame
 xgeCleaned = dfXge[dfXge['Authors'] != "No authorship indicated"]
 print(xgeCleaned["Authors"].isna().sum())  # Sum of rows where Authors is an empty string
-print("="*50)
-print(xgeCleaned['Type'].value_counts())
 
 # Remove rows with specific article types
 excluded_types = ["Commentaries and Replies", "Commentary and Reply", "Commentary", 
@@ -23,7 +21,7 @@ excluded_types = ["Commentaries and Replies", "Commentary and Reply", "Commentar
 xgeCleaned = xgeCleaned[~xgeCleaned['Type'].isin(excluded_types)]
 
 # Print the counts of each unique level in the 'Type' column
-print("="*50)
+print("-"*50)
 print(xgeCleaned['Type'].value_counts())
 
 # Check for duplicates in the xgeCleaned DataFrame
@@ -114,7 +112,7 @@ excluded_types = ["Theoretical Review", "Theoretical/Review", "Theoretical and R
                   "THEORETICAL REVIEW", "Reply", "Observation", "Notes and comment", "Addendum"]
 pbrCleaned = pbrCleaned[~pbrCleaned['Type'].isin(excluded_types)]
 
-print("="*50)
+print("-"*50)
 print(pbrCleaned['Type'].value_counts())
 
 # Write pbrCleaned to a CSV file
@@ -172,7 +170,7 @@ excluded_types = [
     'THIS ARTICLE HAS BEEN RETRACTED'
 ]
 dsCleaned = dsCleaned[~dsCleaned['Type'].isin(excluded_types)]
-print("="*50)
+print("-"*50)
 print(dsCleaned['Type'].value_counts())
 
 # Write pbrCleaned to a CSV file
@@ -181,9 +179,40 @@ dsCleaned.to_csv("results/Journals/Wiley/ds_articles_cleaned.csv", index=False)
 with open("results/Journals/Wiley/ds_articles_cleaned.json", "w", encoding="utf-8") as json_file:
     json.dump(dsCleaned.to_dict(orient="records"), json_file, indent=4, ensure_ascii=False)
 
+
+dfBrt = pd.read_csv('results/Journals/Elsevier/updated_brt_articles.csv')
+brtCleaned = dfBrt
+
+# Remove all rows that are duplicates in the 'Title' column from dsCleaned DataFrame
+brtCleaned = brtCleaned.drop_duplicates(subset='Title', keep=False)
+
+print("="*50)
+# Check for duplicates in the pssCleaned DataFrame
+duplicates = brtCleaned[brtCleaned.duplicated(subset='DOI', keep=False)]
+if not duplicates.empty:
+    print("Duplicates found in brtCleaned:")
+    print(duplicates[['DOI']])
+else:
+    print("No duplicate DOI found in brtCleaned.")
+
+# Remove rows with empty 'Authors' field
+brtCleaned = brtCleaned.dropna(subset=['Authors'])
+
+excluded_types = ["Review article", "Editorial", "Erratum", "Discussion"]
+brtCleaned = brtCleaned[~brtCleaned['Type'].isin(excluded_types)]
+print("-"*50)
+print(brtCleaned['Type'].value_counts())
+
+# Write pbrCleaned to a CSV file
+brtCleaned.to_csv("results/Journals/Elsevier/brt_articles_cleaned.csv", index=False)
+# Write pbrCleaned to a JSON file using json.dump
+with open("results/Journals/Elsevier/brt_articles_cleaned.json", "w", encoding="utf-8") as json_file:
+    json.dump(brtCleaned.to_dict(orient="records"), json_file, indent=4, ensure_ascii=False)
+
 print(len(xgeCleaned))
 print(len(pssCleaned))
 print(len(pbrCleaned))
 print(len(dsCleaned))
+print(len(brtCleaned))
 
-print(sum([len(xgeCleaned), len(pssCleaned), len(pbrCleaned), len(dsCleaned)])) 
+print(sum([len(xgeCleaned), len(pssCleaned), len(pbrCleaned), len(dsCleaned), len(brtCleaned)])) 
