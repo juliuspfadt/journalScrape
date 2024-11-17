@@ -180,6 +180,7 @@ with open("results/Journals/Wiley/ds_articles_cleaned.json", "w", encoding="utf-
     json.dump(dsCleaned.to_dict(orient="records"), json_file, indent=4, ensure_ascii=False)
 
 
+# Behaviour Research and Therapy
 dfBrt = pd.read_csv('results/Journals/Elsevier/updated_brt_articles.csv')
 brtCleaned = dfBrt
 
@@ -209,10 +210,43 @@ brtCleaned.to_csv("results/Journals/Elsevier/brt_articles_cleaned.csv", index=Fa
 with open("results/Journals/Elsevier/brt_articles_cleaned.json", "w", encoding="utf-8") as json_file:
     json.dump(brtCleaned.to_dict(orient="records"), json_file, indent=4, ensure_ascii=False)
 
+
+# Journal of Experimental Social Psychology
+dfJesp = pd.read_csv('results/Journals/Elsevier/jesp_articles.csv')
+jespCleaned = dfJesp
+
+# Remove all rows that are duplicates in the 'Title' column from dsCleaned DataFrame
+jespCleaned = jespCleaned.drop_duplicates(subset='Title', keep=False)
+
+print("="*50)
+# Check for duplicates in the pssCleaned DataFrame
+duplicates = jespCleaned[jespCleaned.duplicated(subset='DOI', keep=False)]
+if not duplicates.empty:
+    print("Duplicates found in jespCleaned:")
+    print(duplicates[['DOI']])
+else:
+    print("No duplicate DOI found in jespCleaned.")
+
+# Remove rows with empty 'Authors' field
+jespCleaned = jespCleaned.dropna(subset=['Authors'])
+
+excluded_types = ["Review article", "Editorial", "Erratum", "Discussion"]
+jespCleaned = jespCleaned[~jespCleaned['Type'].isin(excluded_types)]
+print("-"*50)
+print(jespCleaned['Type'].value_counts())
+
+# Write pbrCleaned to a CSV file
+jespCleaned.to_csv("results/Journals/Elsevier/jesp_articles_cleaned.csv", index=False)
+# Write pbrCleaned to a JSON file using json.dump
+with open("results/Journals/Elsevier/jesp_articles_cleaned.json", "w", encoding="utf-8") as json_file:
+    json.dump(jespCleaned.to_dict(orient="records"), json_file, indent=4, ensure_ascii=False)
+
+print("="*50)
 print(len(xgeCleaned))
 print(len(pssCleaned))
 print(len(pbrCleaned))
 print(len(dsCleaned))
 print(len(brtCleaned))
+print(len(jespCleaned))
 
-print(sum([len(xgeCleaned), len(pssCleaned), len(pbrCleaned), len(dsCleaned), len(brtCleaned)])) 
+print(sum([len(xgeCleaned), len(pssCleaned), len(pbrCleaned), len(dsCleaned), len(brtCleaned), len(jespCleaned)])) 

@@ -1,4 +1,5 @@
 import pandas as pd
+import random
 
 # Load your cleaned DataFrame (replace with your actual file path)
 dfXge = pd.read_csv("results/Journals/APA/xge_articles_cleaned.csv")
@@ -6,6 +7,7 @@ dfPss = pd.read_csv("results/Journals/Sage/pss_articles_cleaned.csv")
 dfPbr = pd.read_csv("results/Journals/Springer/pbr_articles_cleaned.csv")
 dfDs = pd.read_csv("results/Journals/Wiley/ds_articles_cleaned.csv")
 dfBrt = pd.read_csv("results/Journals/Elsevier/brt_articles_cleaned.csv")
+dfJesp = pd.read_csv("results/Journals/Elsevier/jesp_articles_cleaned.csv")
 
 # Print column names of each DataFrame
 print("Columns in dfXge:", dfXge.columns.tolist())
@@ -13,14 +15,21 @@ print("Columns in dfPss:", dfPss.columns.tolist())
 print("Columns in dfPbr:", dfPbr.columns.tolist())
 print("Columns in dfDs:", dfDs.columns.tolist())
 print("Columns in dfBrt:", dfBrt.columns.tolist())
+print("Columns in dfJesp:", dfJesp.columns.tolist())
 
 # Find common columns
-common_columns = list(set(dfXge.columns) & set(dfPss.columns) & set(dfPbr.columns) & set(dfDs.columns) & set(dfBrt.columns))
+common_columns = list(set(dfXge.columns) & set(dfPss.columns) & set(dfPbr.columns) & set(dfDs.columns) 
+                      & set(dfBrt.columns) & set(dfJesp.columns))
 print("Common columns:", common_columns)
 
 # Combine data sets using only the common columns
-combined_df = pd.concat([dfXge[common_columns], dfPss[common_columns], dfPbr[common_columns], dfDs[common_columns], dfBrt[common_columns]], ignore_index=True)
+combined_df = pd.concat([dfXge[common_columns], dfPss[common_columns], dfPbr[common_columns], 
+                         dfDs[common_columns], dfBrt[common_columns], dfJesp[common_columns]], ignore_index=True)
 print("Combined DataFrame shape:", combined_df.shape)
+
+# Select a random sample of 200 articles
+sampled_df = combined_df.sample(n=200, random_state=1)
+print("Sampled DataFrame shape:", sampled_df.shape)
 
 # Function to convert DataFrame to RIS format with additional details
 def convert_to_ris(df, output_path):
@@ -57,7 +66,8 @@ def convert_to_ris(df, output_path):
     print(f"Total articles processed: {len(df)}")
     print(f"Output RIS file includes {len(ris_entries)} entries.")
     print(f"Journals included: {df['Journal'].nunique()}")
-    print("Sample journals:", df['Journal'].unique()[:5])
+    print("Sample journals:", df['Journal'].unique())
 
 # Call the function with the desired output path
-convert_to_ris(combined_df, "results/RIS/output_file.ris")
+convert_to_ris(sampled_df, "results/RIS/allJournals_subsample.ris")
+convert_to_ris(combined_df, "results/RIS/allJournals.ris")
