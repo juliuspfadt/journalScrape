@@ -1,6 +1,7 @@
+
 # journalScrape
 
-Scrape specific journal websites for article titles, authors, years, volumes, issues, page numbers, and dois.
+Scrape specific journal websites for article types, titles, authors, years, volumes, issues, page numbers, and DOIs. 
 
 # Setup
 - I am using: 
@@ -9,6 +10,10 @@ Scrape specific journal websites for article titles, authors, years, volumes, is
   - python3 and pip installed through homebrew and added to vscode
 - create venv and choose homebrew installed python3 as the interpreter
 
+# Disclaimer
+The following is a somewhat overpowered setup. If the interest lies only with common article metadata, it is easiest to adjust the script in the scrapeScripts subfolder [metadata from Crossref](scrapeScripts/getCitationCountFromCrossref.py). With that script most metadata can be easily collected if some best practices from Crossref are adhered to. For instance, an email address and some patience in accessing the site.
+
+Since we are also interested in the article type so we can exclude the non-empirical articles (for our research purpose), we are going through the journal websites and record the article type from the ToCs. However, anyone wanting to replicate this should be aware that accessing the journal websites in such a fashion will result in being blocked and sometimes getting a formal warning from publishers.
 
 # Workflow for APA journal
 - use API requests in a python script. The requests are not easy to be found, but eventually I extracted them from the journal website page source
