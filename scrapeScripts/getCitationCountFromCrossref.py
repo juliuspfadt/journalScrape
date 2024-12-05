@@ -2,6 +2,7 @@ import requests
 import time
 import pandas as pd
 
+
 def fetch_citation_count(doi):
     """
     Fetches the citation count for a given DOI using CrossRef's REST API.

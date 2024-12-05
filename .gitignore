@@ -162,3 +162,7 @@ cython_debug/
 #.idea/
 
 secrets/
+downloads/
+pbr_downloads/
+ds_downloads/
+pss_downloads/
